@@ -1,0 +1,46 @@
+/* ------------------СЕКЦИЯ ОСОБЕННОСТИ-------------------- */
+.features-padding {
+    padding-bottom: 0;
+}
+
+.features {
+    display: flex;
+    margin-right: calc( -1 * var(--item-gap));
+}
+
+.features-item {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    flex-basis: calc(100% / 4 - var(--item-gap)); /*----calc((100% / кол-во элементов в строке - значение марджина)----*/
+    margin-right: var(--item-gap);
+}
+
+.features-box {
+    display: flex;
+    height: 120px;
+    background-color: var(--secondary-background);
+    margin-bottom: var(--item-gap);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.features-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.features-title {  /*Заголовок h3 секция Особенности*/
+    color: var(--secondary-color);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    display: inline-block;
+    margin-bottom: 10px;
+}

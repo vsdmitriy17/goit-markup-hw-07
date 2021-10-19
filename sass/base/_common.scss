@@ -1,0 +1,38 @@
+/* ----------------ОБЩИЕ СТИЛИ СЕКЦИЙ------------------ */
+
+.body {                /*Фон, цвет и Шрифт текста параграфов в секциях*/
+    padding-top: 80px;
+
+    background-color: var(--brand-white-color);
+    color: var(--main-color);
+
+    font-family: Roboto, sans-serif;
+}
+
+.conteiner {   /*Контейнер для центрирования шапки, контента и футера*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    width: 1200px;
+}
+.conteiner.center {    /*Центрирование заголовков*/
+    text-align: center;
+}
+.section-title {   /*Заголовок Секции h2*/
+    color: var(--secondary-color);
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    display: block;
+    margin-bottom: 50px;
+}
+.section {      /* Обертка секций контента*/
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
