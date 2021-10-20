@@ -17,13 +17,13 @@
     transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-button {
+.modal__button {
     position: absolute;
     right: 8px;
     top: 8px;
     z-index: 2;
 
-    display: flex;
+    @include flex();
     height: 30px;
     width: 30px;
     background-color: transparent;
@@ -32,43 +32,34 @@
     border-width: 1px;
     border-style: solid;
     justify-content: center;
-    align-items: center;
 }
 
-.modal-icon-btn {
+.modal__icon-btn {
     width: 18px;
     height: 18px;
     fill: var(--logo-black-color);
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .modal-button:hover &, .modal-button:focus & {
+    .modal__button:hover &, .modal__button:focus & {
         fill: var(--accent-color);
     }
 }
 
 .modal-form {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+    @include font(var(--main-color), 400, 12px, 1.17, 0.01em);
     text-align: left;
 }
 
-.modal-title {
+.modal-form__title {
     display: block;
     margin-bottom: 12px;
 
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: 0.03em;
+    @include font(var(--secondary-color), 700, 20px, 1.15, 0.03em);
     text-align: center;
-    color: var(--secondary-color);
-
 }
 
-.modal-form-field {
+.modal-form__field {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,32 +67,11 @@
     margin-bottom: 10px;
 }
 
-.modal-icon {
-    position: absolute;
-
-    pointer-events: none;
-    width: 18px;
-    height: 18px;
-    left: 12px;
-    bottom: 11px;
-    fill: var(--logo-black-color);
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    .modal-form-input:hover + &, .modal-form-input:focus + & {
-        fill: var(--accent-color);
-    }
-}
-
-.field-coments {
-    margin-bottom: 20px;
-}
-
-.modal-form-label {
+.modal-form__label {
     margin-bottom: 4px;
-
 }
-.modal-form-input {
+
+.modal-form__input {
     padding: 12px 16px 12px 35px;
     max-width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -109,7 +79,7 @@
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .field-coments & {
+    .modal-form__fild-coments & {
         resize: none;
     }
 
@@ -122,22 +92,41 @@
     }
 }
 
-.form-coments {
+.modal-form__icon {
+    position: absolute;
+
+    pointer-events: none;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    bottom: 11px;
+    fill: var(--logo-black-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .modal-form__input:hover + &, .modal-form__input:focus + & {
+        fill: var(--accent-color);
+    }
+}
+
+.modal-form__fild-coments {
+    margin-bottom: 20px;
+}
+
+.modal-form__coments {
     padding: 12px;
 }
 
-.modal-checkbox-field {
-    display: flex;
-    align-items: center;
+.modal-form__checkbox-field {
+    @include flex();
     margin-bottom: 30px;
 }
 
-.modal-checkbox-label {
-    display: flex;
-    align-items: center;
+.modal-form__checkbox-label {
+    @include flex();
 }
 
-.modal-checkbox-input { /* ---------Скрываем чекбокс-----------*/
+.modal-form__checkbox-input { /* ---------Скрываем чекбокс-----------*/
     position: absolute;
     
     -webkit-appearance: none;
@@ -145,7 +134,7 @@
     appearance: none;
 }
 
-.checkbox-icon {
+.modal-form__checkbox-icon {
     width: 16px;
     height: 15px;
     border: 2px solid var(--logo-black-color);
@@ -158,21 +147,20 @@
                 border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .modal-checkbox-input:checked + .modal-checkbox-label > & {
+    .modal-form__checkbox-input:checked + .modal-form__checkbox-label > & {
         border-color: var(--accent-color);
         background-color: var(--accent-color);
         fill: var(--brand-white-color);
     }
 }
 
-.form-link {
+.modal-form__link {
     color: var(--accent-color);
     margin-left: 3px;
 }
 
-.modal-form-btn {
-    display: block;
-    align-items: center;
+.modal-form__btn {
+    @include flex(block);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -184,12 +172,7 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: var(--accent-color);
 
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    text-align: center;
-    color: var(--brand-white-color);
+    @include font(var(--brand-white-color), 700, 16px, 1.88, 0.06em);
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -197,4 +180,3 @@
         background-color: #188CE8;
     }
 }
-

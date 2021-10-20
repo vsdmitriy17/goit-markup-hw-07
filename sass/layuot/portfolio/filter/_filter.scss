@@ -2,15 +2,14 @@
     
 /* ------------------СЕКЦИЯ ФИЛЬТР-------------------------- */
 .filter {
-    display: flex;
+    @extend %list-none;
+    @include flex();
     margin-bottom: 50px;
     justify-content: center;
 }
 
 .filter-item {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+    @include font(var(--main-color), 400, 16px, 1.88, 0.03em);
 
     &:not(:last-child) {
         margin-right: 8px; 
@@ -18,18 +17,14 @@
 }
 
 .btn {
-    color: var(--secondary-color);
     background-color: var(--secondary-background);
 
     cursor: pointer;
     border: transparent;
 
     font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
+    @include font(var(--secondary-color), 500, 16px, 1.63, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
 
     display: inline-block;
     padding: 6px 22px;

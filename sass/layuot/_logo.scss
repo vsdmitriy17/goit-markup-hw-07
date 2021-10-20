@@ -1,18 +1,13 @@
 /* Логотип */
 .logo {
-    color: var(--accent-color);
-
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+    @extend %link-none;
+    @include font(var(--accent-color), 700, 26px, 1.19, 0.03);
 }
 
-.logo-black {
+.logo--black {
     color: var(--logo-black-color);
 }
 
-.logo-white {
+.logo--white {
     color: var(--brand-white-color);
 }

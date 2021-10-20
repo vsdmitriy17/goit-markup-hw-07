@@ -1,5 +1,7 @@
 // -------------Общие-------------------
 @import './utils/vars'; // ПОЛИТРА ЦВЕТОВ И ТЕНЕЙ, ПЕРЕМЕННЫЕ РАЗМЕРОВ И ОТСТУПОВ
+@import './utils/placeholders'; // Убираем маркировку списков и декорирование ссылок
+@import './utils/mixins'; // Шрифты (font), flex
 @import './base/reset'; // СБРОС СТИЛЕЙ ЗАГОЛОВКОВ, АБЗАЦЕВ, СПИСКОВ, ИЗОБРАЖЕНИЙ, ССЫЛОК 
 @import './base/common'; // ОБЩИЕ СТИЛИ СЕКЦИЙ 
 @import './utils/hidden'; // Скрывает элементы 
@@ -22,8 +24,8 @@
 
 // ---------------Team-------------------
 @import './layuot/studio/team/team'; // СЕКЦИЯ НАША КОМАНДА (TEAM)
-// --------------Social-list----------------
-@import './layuot/social-list'; // СОЦСЕТИ
+// --------------Social-links----------------
+@import './layuot/social-links'; // СОЦСЕТИ
 
 // ---------------Clients------------------
 @import './layuot/studio/clients/clients'; // СЕКЦИЯ ПОСТОЯННЫЕ КЛИЕНТЫ (CLIENTS)
@@ -43,5 +45,5 @@
 
 // ---------------Modal-------------------
 @import './layuot/modal/backdrop'; // OVERLAY
-@import './layuot/studio/modal/modal'; // Модальное окно (MODAL)
+@import './layuot/modal/modal'; // Модальное окно (MODAL)
 @import './layuot/modal/is-hidden'; // СКРЫВАЕТ МОДАЛЬНОЕ ОКНО И OVERLAY, В НЕ АКТИВНОМ СОСТОЯНИИ

@@ -1,14 +1,14 @@
 /* Навигация */
-.nav-flex {
-    display: flex;
-    align-items: center;
+.nav {
+    @include flex();
 }
 
 .site-nav {
     display: flex;
     margin-left: 93px;
+    @extend %list-none;
 }
-.site-nav-item {
+.site-nav__item {
     position: relative;
     left: 0;
     top: 0;
@@ -18,13 +18,9 @@
     }
 }
 
-.site-nav-link {
-    color: var(--secondary-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+.site-nav__link {
+    @extend %link-none;
+    @include font(var(--secondary-color), 500, 14px, 1.14, 0.02em);
 
     display: block;
     padding-top: 32px;
@@ -35,12 +31,12 @@
     &:hover, &:focus {
     color: var(--accent-color);
     }
-    &.current {
+    &.nav__current {
         color: var(--accent-color);
     }
 }
 
-.current { 
+.nav__current { 
     &::after {
         position: absolute;
         left: 0;

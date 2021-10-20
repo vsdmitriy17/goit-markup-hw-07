@@ -1,23 +1,25 @@
 /* -------------------СОЦСЕТИ -------------------------*/
-.social-list {
-    display: flex;
+.social {
+    @extend %list-none;
+    @include flex();
     justify-content: center;
 }
-.social-item {
+
+.social__item {
     margin-right: 10px;
     &:last-child {
         margin-right: 0;
     }
 }
 
-.social-link {
-    display: flex;
+.social__link {
+    @extend %link-none;
+    @include flex();
     height: 44px;
     width: 44px;
     background-color: transparent;
     border-radius: 50%;
     justify-content: center;
-    align-items: center;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -26,14 +28,14 @@
     }
 }
 
-.social-icon {
+.social__icon {
     width: 20px;
     height: 20px;
     fill: var(--icon-color);
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .social-link:hover &, .social-link:focus & {
+    .social__link:hover &, .social__link:focus & {
         fill: var(--brand-white-color);
     }
 }

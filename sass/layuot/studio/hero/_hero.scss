@@ -8,7 +8,7 @@
     padding-bottom: 200px;
     text-align: center;
 
-    &.overlay {  /* Фоновое изображение секции Герой */
+    &.hero__overlay {  /* Фоновое изображение секции Герой */
         min-height: var(--hero-min-height);
         max-width: var(--hero-max-width);
         margin-left: auto;
@@ -22,36 +22,24 @@
         background-size: cover; /* заполнить блок полностью */
     }
 }
-.title-center {
-    display: flex;
+.hero__title--center {
+    @include flex();
     justify-content: center;
 }
 
-.hero-title {
-    color: var(--brand-white-color);
-
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+.hero__title {
+    @include font(var(--brand-white-color), 900, 44px, 1.36, 0.06em);
     text-transform: uppercase;
 
     margin-bottom: 30px;
 }
 
-.hero-button {
-    color: var(--brand-white-color);
-
+.hero__button {
     background-color: var(--accent-color);
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-
+    @include font(var(--brand-white-color), 700, 16px, 1.88, 0.02em);
+    @include flex(inline-block);
     cursor: pointer;
-
-    display: inline-block;
-    align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
     border: transparent;

@@ -20,14 +20,8 @@
 .conteiner.center {    /*Центрирование заголовков*/
     text-align: center;
 }
-.section-title {   /*Заголовок Секции h2*/
-    color: var(--secondary-color);
-
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
+.section__title {   /*Заголовок Секции h2*/
+    @include font(var(--secondary-color), 700, 36px, 1.17, 0.03em);
 
     display: block;
     margin-bottom: 50px;

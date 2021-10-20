@@ -1,19 +1,16 @@
 /* Контакты HEADER */
 .contacts-nav {
-    display: flex;
+    @extend %list-none;
+    @include flex();
 }
-.contacts-nav-item {
+.contacts-nav__item {
     &:not(:last-child) {
         margin-right: 50px;
     }
 }
-.contacts-nav-link {
-    color: var(--main-color);
-
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+.contacts-nav__link {
+    @extend %link-none;
+    @include font(var(--main-color), 500, 14px, 1.14, 0.02em);
 
     display: inline-flex;
     padding-top: 32px;
@@ -25,7 +22,7 @@
         color: var(--accent-color);
     }
 }
-.contacts-nav-icon-mail {
+.contacts-nav__icon-mail {
     width: 16px;
     height: 12px;
     margin-right: 10px;
@@ -34,11 +31,11 @@
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .contacts-nav-link:hover &, .contacts-nav-link:focus & {
+    .contacts-nav__link:hover &, .contacts-nav__link:focus & {
         fill: var(--accent-color);
     }
 }
-.contacts-nav-icon-phone {
+.contacts-nav__icon-phone {
     width: 10px;
     height: 16px;
     margin-right: 10px;
@@ -47,7 +44,7 @@
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .contacts-nav-link:hover &, .contacts-nav-link:focus & {
+    .contacts-nav__link:hover &, .contacts-nav__link:focus & {
         fill: var(--accent-color);
     }
 }
