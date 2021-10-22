@@ -45,7 +45,7 @@
   list-style: none;
 }
 
-.logo, .site-nav__link, .contacts-nav__link, .social__link, .client__box, .gallery-link, .adress__link, .contacts__link {
+.logo, .site-nav__link, .contacts-nav__link, .social__link, .client__link, .gallery-link, .adress__link, .contacts__link {
   /*Убираем декорирование ссылок*/
   text-decoration: none;
 }
@@ -82,11 +82,6 @@ img {
   width: 1200px;
 }
 
-.conteiner.center {
-  /*Центрирование заголовков*/
-  text-align: center;
-}
-
 .section__title {
   /*Заголовок Секции h2*/
   color: var(--secondary-color);
@@ -96,6 +91,7 @@ img {
   letter-spacing: 0.03em;
   display: block;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .section {
@@ -188,11 +184,11 @@ img {
   color: var(--accent-color);
 }
 
-.site-nav__link.nav__current {
+.site-nav__link.site-nav__link--current {
   color: var(--accent-color);
 }
 
-.nav__current::after {
+.site-nav__link--current::after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -263,9 +259,6 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-}
-
-.hero.hero__overlay {
   /* Фоновое изображение секции Герой */
   min-height: var(--hero-min-height);
   max-width: var(--hero-max-width);
@@ -279,12 +272,6 @@ img {
   /* Центрировать*/
   background-size: cover;
   /* заполнить блок полностью */
-}
-
-.hero__title--center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero__title {
@@ -317,10 +304,15 @@ img {
   border-bottom-right-radius: 4px;
   padding: 10px 32px;
   box-shadow: var(--shadow-hero-button);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero__button:hover, .hero__button:focus {
+  background-color: #188CE8;
 }
 
 /* ------------------СЕКЦИЯ ОСОБЕННОСТИ-------------------- */
-.features--padding {
+.section--no-padding-bottom {
   padding-bottom: 0;
 }
 
@@ -404,10 +396,11 @@ img {
   padding-bottom: 27px;
   margin-bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
 }
 
 /* ------------------СЕКЦИЯ НАША КОМАНДА -------------------*/
-.team--bgc {
+.section--bgc-grey {
   background-color: var(--secondary-background);
 }
 
@@ -513,7 +506,7 @@ img {
   margin-right: 0;
 }
 
-.client__box {
+.client__link {
   display: flex;
   align-items: center;
   height: 92px;
@@ -525,7 +518,7 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client__box:hover, .client__box:focus {
+.client__link:hover, .client__link:focus {
   border-color: var(--accent-color);
 }
 

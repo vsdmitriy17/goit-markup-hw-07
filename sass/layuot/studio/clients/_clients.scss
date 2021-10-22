@@ -13,7 +13,7 @@
     }
 }
 
-.client__box {
+.client__link {
     @extend %link-none;
     @include flex();
     height: 92px;

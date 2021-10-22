@@ -31,12 +31,12 @@
     &:hover, &:focus {
     color: var(--accent-color);
     }
-    &.nav__current {
+    &.site-nav__link--current {
         color: var(--accent-color);
     }
 }
 
-.nav__current { 
+.site-nav__link--current { 
     &::after {
         position: absolute;
         left: 0;

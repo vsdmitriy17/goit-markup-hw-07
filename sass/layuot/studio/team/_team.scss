@@ -1,7 +1,8 @@
 /* ------------------СЕКЦИЯ НАША КОМАНДА -------------------*/
-.team--bgc {
+.section--bgc-grey {
     background-color: var(--secondary-background);
 }
+
 .team {
     @extend %list-none;
     @include flex();

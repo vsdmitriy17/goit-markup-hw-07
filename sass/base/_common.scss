@@ -17,14 +17,13 @@
 
     width: 1200px;
 }
-.conteiner.center {    /*Центрирование заголовков*/
-    text-align: center;
-}
+
 .section__title {   /*Заголовок Секции h2*/
     @include font(var(--secondary-color), 700, 36px, 1.17, 0.03em);
 
     display: block;
     margin-bottom: 50px;
+    text-align: center;
 }
 .section {      /* Обертка секций контента*/
     padding-top: 94px;
